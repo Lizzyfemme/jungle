@@ -1,7 +1,14 @@
 <section class="cart-show">
 
   <header class="page-header">
+  <% if cart_subtotal_cents == 0 %>
+  <div class="alert alert-info" role="alert">
+Your cart is empty
+ </div>
+  <%else%>
+  
     <h1>My Cart</h1>
+   
   </header>
 
   <div class="panel panel-default items">
@@ -31,7 +38,10 @@
       </tfoot>
     </table>
   </div>
-
+<%end%>
+<% if cart_subtotal_cents ==0 %>
+<div></div>
+<%else%>
   <div class="row">
     <div class="col-xs-12">
       <%= form_tag orders_path do %>
@@ -48,5 +58,6 @@
       <% end %>
     </div>
   </div>
+  <%end%>
 
 </section>
