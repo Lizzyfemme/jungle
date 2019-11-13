@@ -2,12 +2,33 @@
 
   <header class="page-header">
     <h1>Order #<%= @order.id %></h1>
+    <h3>Thank you for shopping with Jungle!</h3>
+    <h4>An email has been sent to <%= @order.email %> with the confirmation of your order.</h4>
   </header>
 
-  <div class="order-summary jumbotron">
-    <h4>Thank you for your order!</h4>
-  </div>
+ <div class="order-summary jumbotron">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th colspan="2">Product</th>
+          <th>Unit Price</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+  <% @line_items.each do |line_item| %>
+        <%= render "item", line_item: line_item, line_total: line_item.total_price %>
+      <% end %>
 
-  <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
+      </tbody>
+       
+        
+
+    </table>
+    
+    
+      Your order total: <%= humanized_money_with_symbol @order.total %> <br/>
+  </div>
 
 </section>
