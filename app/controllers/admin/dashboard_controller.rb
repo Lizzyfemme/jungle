@@ -4,6 +4,8 @@ class Admin::DashboardController < ApplicationController
   def show
     @products = Product.order(id: :desc).all
     @quantity_total = Product.sum(:quantity)
+    @product_count = Product.count(:name)
+    @product_category_count = Product.uniq.count(:category_id)
     
   end
 

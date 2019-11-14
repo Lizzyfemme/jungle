@@ -5,9 +5,9 @@
     <table class="table table-bordered">
       <thead>
         <tr>
-          <th>Product Name</th>
+          <th>Product</th>
           <th>Price</th>
-          <th>category_id</th>
+          <th>Category</th>
            <th>Qty Remaining</th>
         </tr>
       </thead>
@@ -17,7 +17,15 @@
       <% end %>
       </tbody>
       <tfoot>
-      <td colspan="3">Total</td>
+      <td >
+      Totals:
+      </td>
+      <td>
+      <%= @product_count %>
+      </td>
+       <td>
+      <%= @product_category_count  %>
+      </td>
       <td>
       <%= @quantity_total %>
       </td>
