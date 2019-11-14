@@ -9,10 +9,7 @@ class Admin::DashboardController < ApplicationController
     
   end
 
-  # def quantity_total
-  #   quantity_total =14
-  #   quantity_total 
-  # end
+
 
   def product_params
     params.require(:product).permit(
