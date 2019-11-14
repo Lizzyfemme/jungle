@@ -1,2 +1,27 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<h1>Admin Dashboard</h1>
+
+<div class="panel panel-default products">
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Price</th>
+          <th>category_id</th>
+           <th>Qty Remaining</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @products.each do |product| %>
+        <%= render "product", product: product %>
+      <% end %>
+      </tbody>
+      <tfoot>
+      <td colspan="3">Total</td>
+      <td>
+      <%= @quantity_total %>
+      </td>
+      </tfoot>
+    </table>
+
+  </div>
