@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Visitors can see product details by clicking product on the homepage", type: :feature, js: true do
+RSpec.feature "AddToCarts", type: :feature, js: true do
 
 
   # SETUP
@@ -17,15 +17,14 @@ RSpec.feature "Visitors can see product details by clicking product on the homep
       )
     end
   end
-  
-  scenario "They see product details" do
+  scenario "They add a product to the cart" do
     visit root_path
-    click_link("Details »", match: :first)
-    expect(page).to have_css 'section.products-show', count: 1
-    sleep 1
-    save_screenshot "product_details.png"
-   
+    
+    click_button("Add", match: :first)
+ 
+    expect(page).to have_content(" My Cart (1)")
+    save_screenshot "cart.png"
 
   end
-  
+
 end
