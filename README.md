@@ -1,8 +1,12 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+A mini e-commerce application with funny products built with Rails 4.2 for purpose of learning Rails.
 
-## Setup
+!["admin dashboard"](https://github.com/Lizzyfemme/jungle/images/admin_dashboard.png)
+!["landing page"](https://github.com/Lizzyfemme/jungle/images/landing_page.png)
+!["product detail"](https://github.com/Lizzyfemme/jungle/images/product_detail.png)
+
+## Getting Started
 
 1. Run `bundle install` to install dependencies
 2. Create `config/database.yml` by copying `config/database.example.yml`
@@ -24,3 +28,6 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 - Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
 - PostgreSQL 9.x
 - Stripe
+- RSpec
+- Poltergeist/Capybara
+- Boostrap
