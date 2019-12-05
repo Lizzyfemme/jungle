@@ -2,8 +2,18 @@
 
 A mini e-commerce application with funny products built with Rails 4.2 for purpose of learning Rails.
 
+## Screenshots
+
+### Admin Dashboard
+
 !["admin dashboard"](https://github.com/Lizzyfemme/jungle/blob/master/images/admin_dashboard.png)
+
+### Landing Page
+
 !["landing page"](https://github.com/Lizzyfemme/jungle/blob/master/images/landing_page.png)
+
+### Product Detail
+
 !["product detail"](https://github.com/Lizzyfemme/jungle/blob/master/images/product_detail.png)
 
 ## Getting Started
